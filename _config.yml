@@ -2,7 +2,7 @@ title: UNLthesis
 description: LaTeX template for MSc and PhD thesis
 google_analytics: UA-66497615-1
 show_downloads: true
-theme: jekyll-theme-tactile
+theme: jekyll-theme-dinky
 
 gems:
   - jekyll-mentions
