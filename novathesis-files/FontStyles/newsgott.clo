@@ -1,0 +1,12 @@
+\RequirePackage{fontspec}
+
+\setmainfont{NewsGotT}[ 
+Path = novathesis-files/FontStyles/fonts/,
+Extension = .ttf,
+Mapping=tex-text, 
+Numbers=OldStyle, 
+UprightFont=NewsGotT-Regular,
+BoldFont=NewsGotT-Bold,
+ItalicFont=NewsGotT-Italic,
+BoldItalicFont=NewsGotT-BoldItalic]
+
