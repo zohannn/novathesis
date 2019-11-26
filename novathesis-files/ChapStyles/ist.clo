@@ -54,7 +54,7 @@
   \settototalheight\chaptertitleboxheight{%
     \parbox{\textwidth}{\chaptitlefont \strut bg\\bg\strut}}%
     \parbox[t][\chaptertitleboxheight][t]{\textwidth}{%
-      \microtypesetup{protrusion=false}% add this if you use microtype
+      %\microtypesetup{protrusion=false}% add this if you use microtype
       \chaptitlefont\raggedleft\baselineskip=30pt%
       \strut ##1\strut%
     }%

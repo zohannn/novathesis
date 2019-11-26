@@ -786,7 +786,7 @@
 	\xdef\novathesis@tmp{\theabstractorder[\novathesis@opt@lang]}%
   \iteratecsvlist{\novathesis@printabstract@lang}{\novathesis@tmp}%
   % disables protrusion locally in the document for the forthcoming tables of contents
-  \microtypesetup{protrusion=false}%
+  %\microtypesetup{protrusion=false}%
 }
 
 
@@ -801,7 +801,7 @@
 
 \newcommand{\thesismainmatter}{%
   % enables protrusion locally for the remainder of the document
-  \microtypesetup{protrusion=true} %
+  %\microtypesetup{protrusion=true} %
 	\mainmatter%
 	\pagenumbering{arabic} %
 	\setlength{\headheight}{15pt}%
