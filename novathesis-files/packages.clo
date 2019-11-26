@@ -54,13 +54,13 @@
 %%%%% AND BEFORE THE \BEGIN{DOCUMENT}
 \novathesisAtEndClassFile{%
   %%%%% Configure HyperRefs
-  % \RequirePackage[pdftex,usenames]{color}
-  % \RequirePackage[pdftex]{xcolor}
+  % \RequirePackage[xetex,usenames]{color}
+  % \RequirePackage[xetex]{xcolor}
   % \RequirePackage[usenames]{color}
   \RequirePackage{xcolor}%
   \RequirePackage{colortbl}
   \definecolor{darkblue}{rgb}{0.0,0.08,0.45}%
-  \RequirePackage[pdftex, breaklinks, colorlinks=true, pdfdisplaydoctitle]{hyperref}%
+  \RequirePackage[xetex, breaklinks, colorlinks=true, pdfdisplaydoctitle]{hyperref}%
 	\RequirePackage[all]{hypcap}
   \RequirePackage{memhfixc}%   Must be used on memoir document class after hyperref
 
