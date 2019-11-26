@@ -94,4 +94,3 @@ sympy-plots-for-*.tex/
 .DS_Store
 .[a-zA-Z0-9]*
 *.pages
-.synctex*
