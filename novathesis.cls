@@ -569,8 +569,8 @@
   \ifthenelse{\equal{\value{@novathesis@cnt}}{1}}%
   {}%
   {\ifthenelse{\equal{\value{@novathesis@cnt}}{\value{@novathesis@alladvisers@cnt}}}%
-              { and }%
-              {, }%
+              { // }% it should contemplate english and portuguese, at least
+              { // }% this is the way that UM separates advisors
   }%
   #1%
 }%
