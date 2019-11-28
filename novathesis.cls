@@ -125,6 +125,18 @@
 %% Cover definition macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+% --------------------------------------------------------
+% Colour Definition for pantone colours for UM 
+
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{eng}{cmyk}{0.14,0.71,1,0.03}
+\definecolor{um}{cmyk}{0.25,1.00,1.00,0.22}
+\definecolor{lightGray}{gray}{0.92}
+\definecolor{verylightgray}{cmyk}{0,0,0,0.05}
+
+
 %%%%%%% PUT THIS IN A MORE ADEQUATE PLACE
 \newif\if@printcommitteeaux
 \@printcommitteeauxfalse % aux variable
