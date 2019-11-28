@@ -272,7 +272,7 @@
   linkscolor=darkblue,
   secondcover=false,
   aftercover=false,
-  printcommittee=true,
+  printcommittee=false,
 	spine=false,
 	biblatex={%
 		% sorting=nyt,%
