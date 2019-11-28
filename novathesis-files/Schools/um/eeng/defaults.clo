@@ -6,24 +6,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % University
-\university[pt]={Instituto Politécnico de Lisboa}
-\university[en]={Polytechnic Institute of Lisbon}
-\university[fr]={Polytechnic Institute of Lisbon}
-\university[it]={Polytechnic Institute of Lisbon}
+\university[pt]={Universidade do Minho}
+\university[en]={Universidade do Minho}
 
 % Faculty / School
-\faculty[pt]={IInstituto Superior de Engenharia de Lisboa}
-\faculty[en]={Instituto Superior de Engenharia de Lisboa}
-\faculty[fr]={Instituto Superior de Engenharia de Lisboa}
-\faculty[it]={Instituto Superior de Engenharia de Lisboa}
+\faculty[pt]={Escola de Engenharia}
+\faculty[en]={Escola de Engenharia}
 
 % Scientific field
-\majorfield[pt]={Engenharia e Gestão Industrial}
-\majorfield[en]={Industrial Engineering and Management}
+\majorfield[pt]={Engenharia Informática}
+\majorfield[en]={Informatics Engineering}
 
 % Department
-\department[pt]={Área Departamental de \themajorfield[pt]}
-\department[en]={Department of \themajorfield[en]}
+\department[pt]={Departamento de Informática}
+\department[en]={Department of Informatics}
 
 % Comiittee printing order
 \committeeorder[all]={c,r,a,m}% 
@@ -38,11 +34,11 @@
 \thesiscover[plain,front]={}
 
 % Spine info
-\spine[logo]={logoISEL}
-\spine[author]={\theauthorshortname}
-\spine[title]={\thetitle}
-\spine[year]={\thedateyear}
-
+%\spine[logo]={logoISEL}
+%\spine[author]={\theauthorshortname}
+%\spine[title]={\thetitle}
+%\spine[year]={\thedateyear}
+%
 % Set margins for "normal" pages
 \margin[screen,top]={2.5cm}
 \margin[screen,bottom]={2.5cm}
@@ -54,47 +50,87 @@
 \margin[paper,right]={2.5cm}
 
 % Set margins for cover pages
-\margin[phd,top]={2.0cm}
-\margin[phd,bottom]={1.5cm}
+\margin[phd,top]={2.5cm}
+\margin[phd,bottom]={2.5cm}
 \margin[phd,left]={2.5cm}
 \margin[phd,right]={2.5cm}
-\margin[phdplan,top]={2.0cm}
-\margin[phdplan,bottom]={1.5cm}
+\margin[phdplan,top]={2.5cm}
+\margin[phdplan,bottom]={2.5cm}
 \margin[phdplan,left]={2.5cm}
 \margin[phdplan,right]={2.5cm}
-\margin[phdprop,top]={2.0cm}
-\margin[phdprop,bottom]={1.5cm}
+\margin[phdprop,top]={2.5cm}
+\margin[phdprop,bottom]={2.5cm}
 \margin[phdprop,left]={2.5cm}
 \margin[phdprop,right]={2.5cm}
-\margin[msc,top]={2.0cm}
-\margin[msc,bottom]={1.5cm}
-\margin[msc,left]={2.5cm}
-\margin[msc,right]={2.5cm}
-\margin[mscplan,top]={2.0cm}
-\margin[mscplan,bottom]={1.5cm}
-\margin[mscplan,left]={2.5cm}
-\margin[mscplan,right]={2.5cm}
-\margin[bsc,top]={2.0cm}
-\margin[bsc,bottom]={1.5cm}
-\margin[bsc,left]={2.5cm}
-\margin[bsc,right]={2.5cm}
-\margin[plain,top]={2.0cm}
-\margin[plain,bottom]={1.5cm}
+\margin[msc,top]={0cm}
+\margin[msc,bottom]={1cm}
+\margin[msc,left]={7.9cm}
+\margin[msc,right]={0cm}
+\margin[mscplan,top]={0cm}
+\margin[mscplan,bottom]={1cm}
+\margin[mscplan,left]={7.9cm}
+\margin[mscplan,right]={0cm}
+\margin[bsc,top]={0cm}
+\margin[bsc,bottom]={1cm}
+\margin[bsc,left]={7.9cm}
+\margin[bsc,right]={0cm}
+\margin[plain,top]={2.5cm}
+\margin[plain,bottom]={2.5cm}
 \margin[plain,left]={2.5cm}
 \margin[plain,right]={2.5cm}
+%
 
-\dissertationstr[bsc,pt]={Relatório para obtenção do Grau de %
-\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
-\dissertationstr[mscplan,pt]={Relatório intermédio para obtenção do Grau de %
-\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
-\dissertationstr[msc,pt]={Dissertação de natureza científica para obtenção do grau de  %
-\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
-\dissertationstr[phdplan,pt]={Relatório intermédio para obtenção do Grau de %
-\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
-\dissertationstr[phdprop,pt]={Proposta de dissertação para obtenção do Grau de %
-\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
-\dissertationstr[phd,pt]={Dissertação para obtenção do Grau de %
-\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
+
+
+\degreestr[bsc,m,en]={Bachelor}
+\degreestr[bsc,f,en]={Bachelor}
+\degreestr[msc,m,en]={Master of Engineering} 
+\degreestr[msc,f,en]={Master of Engineering} 
+\degreestr[mscplan,m,en]={Master of Engineering}
+\degreestr[mscplan,f,en]={Master of Engineering}
+\degreestr[phd,m,en]={Doctor of Philosophy}
+\degreestr[phd,f,en]={Doctor of Philosophy}
+\degreestr[phdplan,m,en]={Doctor of Philosophy}
+\degreestr[phdplan,f,en]={Doctor of Philosophy}
+\degreestr[phdprop,m,en]={Doctor of Philosophy}
+\degreestr[phdprop,f,en]={Doctor of Philosophy}
+
+\docdegreestr[bsc,en]={Bachelor Report}
+\docdegreestr[msc,en]={Master Dissertation}
+\docdegreestr[mscplan,en]={Master Qualification}
+\docdegreestr[phdplan,en]={Doctorate Qualification}
+\docdegreestr[phdprop,en]={Doctorate Proposal}
+\docdegreestr[phd,en]={Doctorate Dissertation}
+
+%\docdegreestr[bsc,pt]={Projeto de Licenciatura}
+%\docdegreestr[mscplan,pt]={Plano de Dissertação de Mestrado}
+%\docdegreestr[msc,pt]={Dissertação de Mestrado}
+%\docdegreestr[phdplan,pt]={Plano de Tese de Doutoramento}
+%\docdegreestr[phdprop,pt]={Proposta de Tese de Doutoramento}
+%\docdegreestr[phd,pt]={Tese de Doutoramento}
+
+
+%\dissertationstr[bsc,pt]={Relatório para obtenção do Grau de %
+%\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
+%
+%\dissertationstr[mscplan,pt]={Relatório intermédio para obtenção do Grau de %
+%\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
+%
+\dissertationstr[msc,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\[1ex] \textbf{\fontsize{12}{12}\selectfont\ Mestrado em \themajorfield[\novathesis@opt@coverlang]}}
+\dissertationstr[msc,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\[1ex] \textbf{\fontsize{12}{12}\selectfont\ Master of \themajorfield[\novathesis@opt@coverlang]}}
+
+%
+%\dissertationstr[phdplan,pt]={Relatório intermédio para obtenção do Grau de %
+%\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
+%
+%\dissertationstr[phdprop,pt]={Proposta de dissertação de%
+%\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
+%
+%\dissertationstr[phd,pt]={Tese de%
+%\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
+%
 \copyrighttextstr[pt]={O \thefaculty[\novathesis@opt@coverlang]\ e o \theuniversity[\novathesis@opt@coverlang]\ têm o direito, perpétuo e sem limites geográficos, de arquivar e publicar esta dissertação através de exemplares impressos reproduzidos em papel ou de forma digital, ou por qualquer outro meio conhecido ou que venha a ser inventado, e de a divulgar através de repositórios científicos e de admitir a sua cópia e distribuição com objetivos educacionais ou de investigação, não comerciais, desde que seja dado crédito ao autor e editor.}
 
 \copyrighttextstr[en]={The \thefaculty[\novathesis@opt@coverlang]\ and the \theuniversity[\novathesis@opt@coverlang]\ have the right, perpetual and without geographical boundaries, to file and publish this dissertation through printed copies reproduced on paper or on digital form, or by any other means known or that may be invented, and to disseminate through scientific repositories and admit its copying and distribution for non-commercial, educational or research purposes, as long as credit is given to the author and editor.}
@@ -136,79 +172,99 @@
 % \setlength{\cftbeforetableskip}{2mm}
 
 
-% Redefinir fonte de secção, subscção, etc…
-\newbox\s@ch@@ghtb@x
-\setbox\s@ch@@ghtb@x=\hbox{{\normalfont\Huge A}}
-\font\p@rtnamfont=cmbr8 at 13mm % computer modern bright
-\font\s@cnamfont=cmbrsl8 at \ht\s@ch@@ghtb@x % computer modern bright
-\renewcommand\section{\@startsection {section}{1}{0pt}%
-                                   {-3.5ex plus -0.5ex minus -.2ex}%
-                                   {2.3ex \@plus.2ex}%
-                                   {\s@cnamfont}}
-\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
-                                     {-2.5ex plus -0.5ex minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                                     {\normalfont\large\bfseries}}
-\renewcommand\subsubsection{\@startsection{subsubsection}{3}{0pt}%
-                                     {-2.5ex plus -0.5ex minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                                     {\normalfont\normalsize\bfseries}}
-\renewcommand\paragraph{\@startsection{paragraph}{4}{0pt}%
-                                    {0.25ex plus 0.5ex minus.2ex}%
-                                    {-1em}%
-                                    {\normalfont\normalsize\bfseries}}
-\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
-                                       {0.25ex plus 0.5ex minus .2ex}%
-                                       {-1em}%
-                                      {\normalfont\normalsize\bfseries}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % String re-definition; original definitions in string-X.clo
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ % Use array helper defined in novathesis.csl
+ \mynewdata{adviserslabel}
+ 
+ \adviserslabel[pt]={Trabalho efetuado sob a orientação do(a)}
+ \adviserslabel[en]={Dissertation supervised by}
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Draw the cover page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\RequirePackage{fontspec}
+
+\newfontfamily{\newsgottl}{NewsGotTLig}
+
+
+
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{eng}{cmyk}{0.14,0.71,1,0.03}
+\definecolor{um}{cmyk}{0.25,1.00,1.00,0.22}
+\definecolor{lightGray}{gray}{0.92}
+\definecolor{verylightgray}{cmyk}{0,0,0,0.05}
+
+\gdef\umc{um}
+\gdef\engc{eng}
+\RequirePackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+% UM_ENg Logo
+\def\UMEng[#1]#2{\begin{tikzpicture}[
+	% bars styling,
+	bar/.style={rectangle,fill=white,rounded corners=0.08cm,minimum width=0.16cm,inner sep=0pt},
+	umBig/.style={minimum height=0.74cm},
+	umSmall/.style={minimum height=0.48cm},
+	engBar/.style={minimum height=0.86cm},
+	umLogoPosition/.style={xshift=1.3cm,yshift=1.3cm},
+	engLogoPosition/.style={xshift=3.9cm,yshift=1.3cm}]
+	
+	% Uminho logo
+	\fill[fill=#1] (0,0) -- (2.6,0) -- (2.6,2.6) -- (0,2.6) -- cycle;
+	\foreach \i in {1,...,3}{
+		\node at (\i*120+30:0.45)[bar,umBig,umLogoPosition,rotate=\i*120-60]{};
+		\node at (\i*120+90:0.60)[bar,umSmall,umLogoPosition,rotate=\i*120]{};
+	}
+	% EngUminho logo
+	\fill[fill=#2] (2.6,0) -- (5.2,0) -- (5.2,2.6) -- (2.6,2.6) -- cycle;
+	\foreach \i in {1,...,5}
+		\node at (\i*72-90:0.74)[bar,engBar,engLogoPosition,rotate=\i*72-90]{};
+\end{tikzpicture}}
+
 % LOGO
-\coveritem[c]{0cm}{%
-  \includegraphics[width=2cm]{logoISEL}%
+\coveritem[l]{0cm}{%
+\UMEng[\umc]{\engc}
 }
 
-% School
-\coveritem[c]{0.5cm}{%
-  \fontsize{13}{13}\selectfont%
-  \textbf{\MakeUppercase{\thefaculty[\novathesis@opt@coverlang]}}\\%
-  \fontsize{10}{10}\selectfont%
-  \textbf{\MakeUppercase{\thedepartment[\novathesis@opt@coverlang]}}%
+% University and School
+\coveritem[l]{0.7cm}{%
+  \fontsize{14.8}{13.5}\selectfont%
+  \textcolor{grey}{\textbf{\theuniversity[\novathesis@opt@coverlang]}}\\%
+  \fontsize{14.8}{13.5}\selectfont%
+  \textcolor{grey}{\newsgottl{\thefaculty[\novathesis@opt@coverlang]}}\\%
 }
 
-\coveritem[c]{0.5cm}{
-	\ifthenelse{\equal{\thefrontpageimage}{\novathesis@undefined}}{}{\includegraphics[width=12cm,  height=8cm]{\thefrontpageimage}}
+
+
+% Author name and Title of Dissertation
+\coveritem[l]{4.3cm}{%
+  \linespread{1.0}
+  \fontsize{17pt}{20.4pt}\selectfont%
+  \textcolor{grey}{\theauthorname}%
+  \\[2.5ex]
+  \fontsize{17pt}{20.4pt}\selectfont%
+  \textcolor{grey}{\textbf{\covertitle}}%
 }
 
-% % Title of Dissertation
-\coveritem[c]{1}{%
-  \fontsize{18}{20}\selectfont%
-  \textbf{\covertitle}%
-}
 
-% Author name
-\coveritem[c]{1}{%
-  \fontsize{16}{16}\selectfont%
-  \textbf{\theauthorname}\\[1ex]
-  \fontsize{14}{14}\selectfont%
-  (\theauthordegree)%
-}
-
-% Degree
-\coveritem[c]{1}{%
-  \fontsize{12}{12}\selectfont%
-  \thepresentationtext%
-}
 
 % Advisers
-\coveritem[c]{2}{%
-  \adviserstrfont[\novathesis@opt@coverlang]={\bfseries}%
-  \coadviserstrfont[\novathesis@opt@coverlang]={\bfseries}%
-  \fontsize{11}{11}\selectfont%
-  \printadvisers%
+\coveritem[l]{2}{%
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \textcolor{grey}{\theadviserslabel[\novathesis@opt@coverlang]\\%
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \textbf{\printadvisersaslist}}%
 }
 
 
@@ -218,21 +274,24 @@
     \equal{\novathesis@opt@docdegree}{bsc}%
     \OR\equal{\novathesis@opt@docdegree}{msc}%
     \OR\equal{\novathesis@opt@docdegree}{phd}}%
-  {\committeetitlestrfont[\novathesis@opt@coverlang]={\fontsize{14}{14}\selectfont\bfseries}%
-    \commiteememberstrfont[\novathesis@opt@coverlang]={\bfseries}%
-    \fontsize{11}{11}\selectfont\printcommittee%
+  {
+  \textcolor{grey}{\committeetitlestrfont[\novathesis@opt@coverlang]={\fontsize{14}{14}\selectfont\bfseries}%
+  \commiteememberstrfont[\novathesis@opt@coverlang]={\bfseries}%
+  \fontsize{11}{11}\selectfont\printcommittee}%  
   }%
   {}%
 }
 
 
 % Date
-\coveritem[c]{1}{%
+\coveritem[l]{1}{%
   \fontsize{10}{10}\selectfont%
   \ifdraftdoc%
-    \textbf{DRAFT: \today}%
+  \textcolor{grey}{DRAFT: \today}%
   \else%
-    \textbf{\thedatemonth, \thedateyear}%
+  \textcolor{grey}{\thedatemonth, \thedateyear}%
   \fi%
 }
+
+
 
