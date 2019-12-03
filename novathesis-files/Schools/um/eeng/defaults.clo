@@ -218,11 +218,6 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 %% Draw the cover page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage{fontspec}
-
-\newfontfamily{\newsgottl}{NewsGotTLig}
-
-
 
 \definecolor{grey}{rgb}{0.6,0.6,0.6}
 \definecolor{eng}{cmyk}{0.14,0.71,1,0.03}

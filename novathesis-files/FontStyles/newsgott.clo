@@ -1,5 +1,14 @@
 \RequirePackage{fontspec}
 
+\newfontfamily{\newsgottl}{NewsGotT}[
+Path = novathesis-files/FontStyles/fonts/,
+Extension = .ttf,
+Mapping=tex-text, 
+UprightFont=NewsGotT-Light
+]
+
+
+
 \setmainfont{NewsGotT}[ 
 Path = novathesis-files/FontStyles/fonts/,
 Extension = .ttf,
