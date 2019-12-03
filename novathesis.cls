@@ -125,7 +125,11 @@
 %% Cover definition macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\newcommand{\@coverstyle}[2]{
+    \pagecolor{#1}% 
+    \leavevmode\color{#2}%
+ }
+ 
 
 % --------------------------------------------------------
 % Colour Definition for pantone colours for UM 
@@ -189,6 +193,7 @@
 \newsavebox{\novathesis@coverbox}%
 
 \newcommand{\printcoverpage}{%
+
   \thispagestyle{empty}%
   \selectthelanguage{\novathesis@opt@coverlang}%
   
@@ -203,6 +208,9 @@
       -\themargin[\novathesis@opt@docdegree,bottom]}%
 
   \sbox{\novathesis@coverbox}{%
+
+    \gdef\hide{1}%
+    \@coverstyle{white}{grey}
     \parbox[t][\mpheight][t]{\mpwidth}{%
       \printcoveritems%
     }%
@@ -235,6 +243,9 @@
 	      -\themargin[\novathesis@opt@docdegree,bottom]}%
 	  \newsavebox{\novathesis@aftercoverbox}%
 	  \sbox{\novathesis@aftercoverbox}{%
+        \gdef\hide{0}%
+        \gdef\umc{grey}\gdef\engc{lightgray}
+        \@coverstyle{white}{grey}
 	    \parbox[t][\mpheight][t]{\mpwidth}{%
 	      \printcoveritems%
 	    }%
@@ -367,13 +378,16 @@
 \gdef\thecopyrightstr{%
   \thispagestyle{empty}%
   \selectthelanguage{\novathesis@opt@copyrightlang}%
-  \noindent%
-  Copyright \textcopyright\ \theauthorname, %
-  \thefaculty[\novathesis@opt@copyrightlang], \theuniversity[\novathesis@opt@copyrightlang].\\%
   \thecopyrighttextstr[\novathesis@opt@copyrightlang]%
   \selectthelanguage{\novathesis@opt@lang}
 }
 
+\gdef\thestatementofintegritystr{%
+  \thispagestyle{empty}%
+  \selectthelanguage{\novathesis@opt@coverlang}%
+  \thestatementofintegritytextstr[\novathesis@opt@coverlang]%
+  \selectthelanguage{\novathesis@opt@coverlang}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% IDENTIFICATION
@@ -550,11 +564,13 @@
               [\novathesis@tmp@total,\novathesis@tmp@gender,\novathesis@opt@coverlang]:%
 %              [\novathesis@tmp@total][\novathesis@tmp@gender][\novathesis@opt@coverlang]\\
     }
+    \with
     \forlistcsloop{\printadvisers@ii}{novathesis@#1adviser@list}%
   \fi%
 }
 
 \newcommand{\printadvisers}{%
+
   \newbox\novathesis@savebox%
   \sbox\novathesis@savebox{%
     \begin{tabular}{@{}rl@{}}%
@@ -571,6 +587,7 @@
     }%
   \fi%
   \noindent\usebox\novathesis@savebox%
+
 }
 
 
@@ -581,8 +598,8 @@
   \ifthenelse{\equal{\value{@novathesis@cnt}}{1}}%
   {}%
   {\ifthenelse{\equal{\value{@novathesis@cnt}}{\value{@novathesis@alladvisers@cnt}}}%
-              { // }% it should contemplate english and portuguese, at least
-              { // }% this is the way that UM separates advisors
+              { \\ }% it should contemplate english and portuguese, at least
+              { \\ }% this is the way that UM separates advisors
   }%
   #1%
 }%
@@ -938,6 +955,40 @@
 \newcommand{\printbib}{\printbibliography}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Statement of integrity page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\printstatementofintegrity}{%
+	\ifthenelse{%
+		\equal{\novathesis@opt@docdegree}{bsc}% bsc
+		\OR%
+		\equal{\novathesis@opt@docdegree}{msc}% msc
+		\OR%
+		\equal{\novathesis@opt@docdegree}{phd}% phd
+	}{% THEN
+		\printstatementofintegritypage%
+	}{% ELSE
+	}%
+}
+
+\newcommand{\printstatementofintegritypage}{%
+
+\cleardoublepage%
+\thispagestyle{empty}
+\mbox{}
+\AddToShipoutPictureFG*{% Add only to the ForeGround of this page
+    \AtPageCenter{% lower-left anchor at Page Center
+      \makebox[0pt]{% horizontally centered anchor
+        \parbox{\textwidth}{%
+        \thestatementofintegritystr%
+        }% Necessarily vertically centered anchor
+      }%
+    }%
+  }%
+  \cleardoublepage%
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Copyright page
@@ -956,18 +1007,18 @@
 }
 
 \newcommand{\printcopyrightpage}{%
-	\cleardoublepage%
-	\null\vfill%
-  \noindent%
-  \textbf{\large \thetitle}\par%
-  \bigskip%
-  \thecopyrightstr\par%
-  \vskip\baselineskip%
-  {\scriptsize%
-      \begin{Spacing}{1}%
-        \fontfamily{phv}\fontsize{6.3}{6.3}\selectfont%
-        \noindent\theacknowledgmentsstr[\novathesis@opt@coverlang]%
-      \end{Spacing}%
+
+\cleardoublepage%
+\thispagestyle{empty}
+\mbox{}
+\AddToShipoutPictureFG*{% Add only to the ForeGround of this page
+    \AtPageCenter{% lower-left anchor at Page Center
+      \makebox[0pt]{% horizontally centered anchor
+        \parbox{\textwidth}{%
+        \thecopyrightstr%
+        }% Necessarily vertically centered anchor
+      }%
+    }%
   }%
   \cleardoublepage%
 }
