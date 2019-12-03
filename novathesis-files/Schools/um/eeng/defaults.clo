@@ -7,11 +7,11 @@
 
 % University
 \university[pt]={Universidade do Minho}
-\university[en]={Universidade do Minho}
+\university[en]={University of Minho}
 
 % Faculty / School
 \faculty[pt]={Escola de Engenharia}
-\faculty[en]={Escola de Engenharia}
+\faculty[en]={School of Engineering}
 
 % Scientific field
 \majorfield[pt]={Engenharia Informática}
@@ -117,9 +117,9 @@
 %\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
 %
 \dissertationstr[msc,pt]={%
-\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\[1ex] \textbf{\fontsize{12}{12}\selectfont\ Mestrado em \themajorfield[\novathesis@opt@coverlang]}}
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Mestrado em \themajorfield[\novathesis@opt@coverlang]}
 \dissertationstr[msc,en]={%
-\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\[1ex] \textbf{\fontsize{12}{12}\selectfont\ Master of \themajorfield[\novathesis@opt@coverlang]}}
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master of \themajorfield[\novathesis@opt@coverlang]}
 
 %
 %\dissertationstr[phdplan,pt]={Relatório intermédio para obtenção do Grau de %
@@ -131,10 +131,35 @@
 %\dissertationstr[phd,pt]={Tese de%
 %\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
 %
-\copyrighttextstr[pt]={O \thefaculty[\novathesis@opt@coverlang]\ e o \theuniversity[\novathesis@opt@coverlang]\ têm o direito, perpétuo e sem limites geográficos, de arquivar e publicar esta dissertação através de exemplares impressos reproduzidos em papel ou de forma digital, ou por qualquer outro meio conhecido ou que venha a ser inventado, e de a divulgar através de repositórios científicos e de admitir a sua cópia e distribuição com objetivos educacionais ou de investigação, não comerciais, desde que seja dado crédito ao autor e editor.}
 
-\copyrighttextstr[en]={The \thefaculty[\novathesis@opt@coverlang]\ and the \theuniversity[\novathesis@opt@coverlang]\ have the right, perpetual and without geographical boundaries, to file and publish this dissertation through printed copies reproduced on paper or on digital form, or by any other means known or that may be invented, and to disseminate through scientific repositories and admit its copying and distribution for non-commercial, educational or research purposes, as long as credit is given to the author and editor.}
+\mynewdata{copyrightlabel}
 
+\copyrightlabel[pt]={Licença concedida aos utilizadores deste trabalho}
+\copyrightlabel[en]={License granted to users of this work}
+
+\newcommand{\licenseThis}{%
+\normalsize{\textit{\textbf{\thecopyrightlabel[\novathesis@opt@coverlang]}}}\\
+
+\doclicenseImage\\[0.5mm]%
+\normalsize\textbf{\doclicenseLongName}\\[0.5mm]
+\normalsize\textbf{\doclicenseName}\\[2ex]
+\small\url{\doclicenseURL}
+}
+
+\copyrighttextstr[pt]={\begin{center}{\textbf{DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS}}\end{center} \hspace{\parindent} Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.\\[1ex] \rule{\parindent}{0pt} Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo
+indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não previstas no licenciamento indicado, deverá contactar o autor, através do RepositoriUM da \theuniversity[\novathesis@opt@coverlang].\\[1cm]\licenseThis}
+
+
+\copyrighttextstr[en]={\noindent\begin{center}{\textbf{COPYRIGHT AND TERMS OF USE OF THIS WORK BY A THIRD PARTY}}\end{center} \hspace{\parindent} This is academic work that can be used by third parties as long as internationally accepted rules and good practices regarding copyright and related rights are respected. \\[1ex] \rule{\parindent}{0pt} Accordingly, this work may be used under the license provided below.\\[1ex] \rule{\parindent}{0pt} If the user needs permission to make use of the work under conditions not provided for in the indicated licensing, they should contact the author through the RepositoriUM of \theuniversity[\novathesis@opt@coverlang].\\[1cm]\licenseThis}
+
+
+\mynewdata{statementofintegritytextstr}
+
+
+\statementofintegritytextstr[pt]={\begin{center}{\textbf{DECLARAÇÃO DE INTEGRIDADE}}\end{center} \hspace{\parindent} Declaro ter atuado com integridade na elaboração do presente trabalho académico e confirmo que não recorri à prática de plágio nem a qualquer forma de utilização indevida ou falsificação de informações ou resultados em nenhuma das etapas conducente à sua elaboração.\\[1ex] \rule{\parindent}{0pt} Mais declaro que conheço e que respeitei o Código de Conduta Ética da \theuniversity[\novathesis@opt@coverlang].}
+
+
+\statementofintegritytextstr[en]={\begin{center}{\textbf{STATEMENT OF INTEGRITY}}\end{center} \hspace{\parindent} I hereby declare having conducted this academic work with integrity. I confirm that I have not used plagiarism or any form of undue use of information or falsification of results along the process leading to its elaboration.\\[1ex] \rule{\parindent}{0pt} I further declare that I have fully acknowledged the Code of Ethical Conduct of the \theuniversity[\novathesis@opt@coverlang].}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % IST guidelines:
@@ -231,6 +256,8 @@
 	\foreach \i in {1,...,5}
 		\node at (\i*72-90:0.74)[bar,engBar,engLogoPosition,rotate=\i*72-90]{};
 \end{tikzpicture}}
+\def\optionaladvisers#1{\ifnum\hide=1\relax\else{#1}\fi}
+
 
 % LOGO
 \coveritem[l]{0cm}{%
@@ -240,9 +267,9 @@
 % University and School
 \coveritem[l]{0.7cm}{%
   \fontsize{14.8}{13.5}\selectfont%
-  \textcolor{grey}{\textbf{\theuniversity[\novathesis@opt@coverlang]}}\\%
+  \textbf{\theuniversity[\novathesis@opt@coverlang]}\\%
   \fontsize{14.8}{13.5}\selectfont%
-  \textcolor{grey}{\newsgottl{\thefaculty[\novathesis@opt@coverlang]}}\\%
+  \newsgottl{\thefaculty[\novathesis@opt@coverlang]}\\%
 }
 
 
@@ -251,20 +278,24 @@
 \coveritem[l]{4.3cm}{%
   \linespread{1.0}
   \fontsize{17pt}{20.4pt}\selectfont%
-  \textcolor{grey}{\theauthorname}%
+  \theauthorname%
   \\[2.5ex]
   \fontsize{17pt}{20.4pt}\selectfont%
-  \textcolor{grey}{\textbf{\covertitle}}%
+  \textbf{\covertitle}%
 }
-
 
 
 % Advisers
 \coveritem[l]{2}{%
+\optionaladvisers{
   \fontsize{14pt}{16.8pt}\selectfont%
-  \textcolor{grey}{\theadviserslabel[\novathesis@opt@coverlang]\\%
+  \thedissertationstr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\\[6mm]%
   \fontsize{14pt}{16.8pt}\selectfont%
-  \textbf{\printadvisersaslist}}%
+  \theadviserslabel[\novathesis@opt@coverlang]\\%
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \textbf{\printadvisersaslist}%
+\\\rule{0pt}{6mm}
+    }
 }
 
 
@@ -275,9 +306,9 @@
     \OR\equal{\novathesis@opt@docdegree}{msc}%
     \OR\equal{\novathesis@opt@docdegree}{phd}}%
   {
-  \textcolor{grey}{\committeetitlestrfont[\novathesis@opt@coverlang]={\fontsize{14}{14}\selectfont\bfseries}%
+  \committeetitlestrfont[\novathesis@opt@coverlang]={\fontsize{14}{14}\selectfont\bfseries}%
   \commiteememberstrfont[\novathesis@opt@coverlang]={\bfseries}%
-  \fontsize{11}{11}\selectfont\printcommittee}%  
+  \fontsize{11}{11}\selectfont\printcommittee%  
   }%
   {}%
 }
@@ -287,9 +318,9 @@
 \coveritem[l]{1}{%
   \fontsize{10}{10}\selectfont%
   \ifdraftdoc%
-  \textcolor{grey}{DRAFT: \today}%
+  DRAFT: \today%
   \else%
-  \textcolor{grey}{\thedatemonth, \thedateyear}%
+  \thedatemonth, \thedateyear%
   \fi%
 }
 
