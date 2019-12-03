@@ -38,8 +38,8 @@
   docdegree=msc,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
   school=um/eeng,      % nova/fct(*), nova/fcsh, nova/ims, ul/ist, ul/fc, ipl/isel
   lang=pt,              % en(*), fr, it, pt
-  % coverlang=en,         % defaults to main language
-  % copyrightlang=en,     % defaults to main language
+  %coverlang=en,         % defaults to main language
+  %copyrightlang=en,     % defaults to main language
   fontstyle=newsgott,    % baskervaldx bookman charter ebgaramond fbb fourier garamond
                         % heuristica kpfonts(*) libertine mathpazo1 mathpazo2 newcent
                         % newpx newtx 
@@ -88,11 +88,13 @@
     a4paper,            % the paper size/format
     12pt,               % 10pt, 11pt(*), 12pt
     final,              % draft, final  <= Replace 'draft' with 'final' in final version
+    oneside
   },
   media=screen,         % screen(*), paper
           % behavior to be defined in school options based in "\novathesis@opt@media"
           % definitions for screen: left and right margins are equal, colored links
           % definitions for paper: left and right margins are different, black links
+  oneside
 ]{novathesis}
 
 
@@ -107,7 +109,7 @@
 %------------------------------------------------------------------
 % Additional packages you may want to use (comment those not needed)
 %------------------------------------------------------------------
-
+\linespread{1.3}
 %% VERY IMPORTANT
 \usepackage{booktabs}    % Beautiful simple tables
 \usepackage{paralist}    % To enable customizble enumerates
@@ -123,7 +125,12 @@
 %% FOR DEMO PURPOSES ONLY --- TO BE REMOVED by final users
 \usepackage{lipsum}
 
-
+\usepackage[
+    type={CC},
+    %lang=portuguese,
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
 %------------------------------------------------------------------
 % Costumization of some packages
 %------------------------------------------------------------------
@@ -194,20 +201,6 @@
 % \coadviser[f]{[Nome da co-orientadora 2]}{[Profª.\ Auxiliar]}{[Universidade Nova de Lisboa]}
 
 
-% committee (maximum of 9 elements)
-% Use [c] for chair, [r] for raporteurs, [a] for advisers, [m] or nothing for remaining members
-% Chair of the committee
-\committee[c,m]{Name of the committee chairperson}
-% Main raporteurs
-\committee[r,f]{Name of a raporteur}
-\committee[r,f]{Name of another raporteur}
-% Advisers
-\committee[a,f]{Name of an adviser}
-\committee[a,f]{Name of another adviser}
-% Other members of the committee - include the Adviser in this list
-\committee[m,m]{Another member of the committee}
-\committee[m,f]{Yet another member of the committee}
-
 %%------------------------------------------------------------
 %% All the names inside braces below sould correspond to a file
 %%     with extension ".tex" and located in the "Chapters" folder
@@ -232,8 +225,6 @@
 \acronymsfile{acronyms} 
 \symbolsfile{symbols}
 
-% definition of the second cover, to be printed before the copyright (to serve FCSH-NOVA)
-\aftercoverfile{aftercover-nova-ims}
 
 
 % The Table of Contents is always printed.
@@ -281,12 +272,13 @@
 %% Begining of document
 \begin{document}
 
+\printcoverpage    % The cover page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thesisfrontmatter  % Before the main text (TOC, etc)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\printcoverpage    % The cover page
 \printaftercover
 \printcopyright    % Print the copyright page (will only be printed if adequate for the document type)
+\printstatementofintegrity
 \printdedicatory  % Print the dedicatory (will only be printed if adequate for the document type)
 \printacknowledgements  % Print the acknowledgments (will only be printed if adequate for the document type)
 \printquote        % Print the quote (if file exists and is adequate for the document type)
