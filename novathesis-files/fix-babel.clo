@@ -18,6 +18,8 @@
   \def\indexname{Índice Remissivo}%
   \def\lstlistlistingname{Listagens}%
   \def\lstlistingname{Listagem}%
+  \def\listalgorithmname{Algoritmos}%
+  \floatname{algorithm}{Algoritmo}%
   \defineshorthand{"-}{\babelhyphen{repeat}}% generates a hyphen that will repeat on a new line
   \gdef\annexname{Anexo}
   \gdef\annexnamepl{Anexos}
@@ -26,6 +28,8 @@
 \addto\captionsenglish{%
   \def\lstlistlistingname{Listings}%
   \def\lstlistingname{Listing}%
+  \def\listalgorithmname{Algorithms}%
+  \floatname{algorithm}{Algorithm}%
   \gdef\annexname{Annex}
   \gdef\annexnamepl{Annexes}
   \gdef\appendixnamepl{Appendices}
