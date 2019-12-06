@@ -114,6 +114,10 @@
 \usepackage{booktabs}    % Beautiful simple tables
 \usepackage{paralist}    % To enable customizble enumerates
 
+\usepackage{algorithmic}
+\usepackage[chapter]{algorithm}
+%\usepackage{algpseudocode}
+
 %% IMPORTANT (consider removing/commenting)
 %\usepackage{colortbl}    % Use colors in background of table cells
 \usepackage[textsize=footnotesize]{todonotes}  % To register TODO notes in the text
@@ -225,13 +229,13 @@
 \acronymsfile{acronyms} 
 \symbolsfile{symbols}
 
-
-
 % The Table of Contents is always printed.
 % The other lists below may be commented and omitted.
 \addlisttofrontmatter{\listoffigures}  % The List of Figures. Comment to omit.
 \addlisttofrontmatter{\listoftables}   % The List of Tables. Comment to omit.
 \addlisttofrontmatter{\lstlistoflistings}  % The List of Code Listings. Comment to omit.
+\addlisttofrontmatter{\lstlistofalgorithms}  % The List of Algorithms. Comment to omit.
+\pdfbookmark[1]{\listalgorithmname}{loa} % Bookmark the list of algorithms to the PDF
 \addlisttofrontmatter{\glsnogroupskiptrue\setlength{\glsdescwidth}{0.8\textwidth}\printnoidxglossaries}  % The Glossary and List of Acrnonyms
 
 
