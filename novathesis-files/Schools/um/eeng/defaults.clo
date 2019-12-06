@@ -22,7 +22,7 @@
 \department[en]={Department of Informatics}
 
 % Comiittee printing order
-\committeeorder[all]={c,r,a,m}% 
+\committeeorder[all]={c,r,a,m}%
 
 % Cover background images
 \thesiscover[phd,front]={}
@@ -50,18 +50,18 @@
 \margin[paper,right]={2.5cm}
 
 % Set margins for cover pages
-\margin[phd,top]={2.5cm}
-\margin[phd,bottom]={2.5cm}
-\margin[phd,left]={2.5cm}
-\margin[phd,right]={2.5cm}
-\margin[phdplan,top]={2.5cm}
-\margin[phdplan,bottom]={2.5cm}
-\margin[phdplan,left]={2.5cm}
-\margin[phdplan,right]={2.5cm}
-\margin[phdprop,top]={2.5cm}
-\margin[phdprop,bottom]={2.5cm}
-\margin[phdprop,left]={2.5cm}
-\margin[phdprop,right]={2.5cm}
+\margin[phd,top]={0cm}
+\margin[phd,bottom]={1cm}
+\margin[phd,left]={7.9cm}
+\margin[phd,right]={0cm}
+\margin[phdplan,top]={0cm}
+\margin[phdplan,bottom]={1cm}
+\margin[phdplan,left]={7.9cm}
+\margin[phdplan,right]={0cm}
+\margin[phdprop,top]={0cm}
+\margin[phdprop,bottom]={1cm}
+\margin[phdprop,left]={7.9cm}
+\margin[phdprop,right]={0cm}
 \margin[msc,top]={0cm}
 \margin[msc,bottom]={1cm}
 \margin[msc,left]={7.9cm}
@@ -84,8 +84,8 @@
 
 \degreestr[bsc,m,en]={Bachelor}
 \degreestr[bsc,f,en]={Bachelor}
-\degreestr[msc,m,en]={Master of Engineering} 
-\degreestr[msc,f,en]={Master of Engineering} 
+\degreestr[msc,m,en]={Master of Engineering}
+\degreestr[msc,f,en]={Master of Engineering}
 \degreestr[mscplan,m,en]={Master of Engineering}
 \degreestr[mscplan,f,en]={Master of Engineering}
 \degreestr[phd,m,en]={Doctor of Philosophy}
@@ -97,14 +97,14 @@
 
 \docdegreestr[bsc,en]={Bachelor Report}
 \docdegreestr[msc,en]={Master Dissertation}
-\docdegreestr[mscplan,en]={Master Qualification}
+\docdegreestr[mscplan,en]={Master Dissertation\'s Preliminary Report}
 \docdegreestr[phdplan,en]={Doctorate Qualification}
 \docdegreestr[phdprop,en]={Doctorate Proposal}
 \docdegreestr[phd,en]={Doctorate Dissertation}
 
 %\docdegreestr[bsc,pt]={Projeto de Licenciatura}
-%\docdegreestr[mscplan,pt]={Plano de Dissertação de Mestrado}
-%\docdegreestr[msc,pt]={Dissertação de Mestrado}
+\docdegreestr[mscplan,pt]={Relatório Preliminar de Dissertação de Mestrado}
+\docdegreestr[msc,pt]={Dissertação de Mestrado}
 %\docdegreestr[phdplan,pt]={Plano de Tese de Doutoramento}
 %\docdegreestr[phdprop,pt]={Proposta de Tese de Doutoramento}
 %\docdegreestr[phd,pt]={Tese de Doutoramento}
@@ -112,12 +112,16 @@
 
 %\dissertationstr[bsc,pt]={Relatório para obtenção do Grau de %
 %\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
-%
-%\dissertationstr[mscplan,pt]={Relatório intermédio para obtenção do Grau de %
-%\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
-%
-\dissertationstr[msc,pt]={%
+
+
+\dissertationstr[mscplan,pt]={%
 \thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Mestrado em \themajorfield[\novathesis@opt@coverlang]}
+
+
+\dissertationstr[mscplan,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master of \themajorfield[\novathesis@opt@coverlang]}
+
+
 \dissertationstr[msc,en]={%
 \thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master of \themajorfield[\novathesis@opt@coverlang]}
 
@@ -135,7 +139,7 @@
 \mynewdata{copyrightlabel}
 
 \copyrightlabel[pt]={Licença concedida aos utilizadores deste trabalho}
-\copyrightlabel[en]={License granted to users of this work}
+\copyrightlabel[en]={License granted to the users of this work}
 
 \newcommand{\licenseThis}{%
 \normalsize{\textit{\textbf{\thecopyrightlabel[\novathesis@opt@coverlang]}}}\\
@@ -166,11 +170,11 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 % The pages should be numbered consecutively at the bottom centre of the
 % page.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makepagestyle{novathesis@myvf} 
-\makeoddfoot{novathesis@myvf}{}{\thepage}{} 
-\makeevenfoot{novathesis@myvf}{}{\thepage}{} 
-\makeheadrule{novathesis@myvf}{\textwidth}{\normalrulethickness} 
-\makeevenhead{novathesis@myvf}{\small\textsc{\leftmark}}{}{} 
+\makepagestyle{novathesis@myvf}
+\makeoddfoot{novathesis@myvf}{}{\thepage}{}
+\makeevenfoot{novathesis@myvf}{}{\thepage}{}
+\makeheadrule{novathesis@myvf}{\textwidth}{\normalrulethickness}
+\makeevenhead{novathesis@myvf}{\small\textsc{\leftmark}}{}{}
 \makeoddhead{novathesis@myvf}{}{}{\small\textsc{\rightmark}}
 \pagestyle{novathesis@myvf}
 %
@@ -203,10 +207,10 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  % String re-definition; original definitions in string-X.clo
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
+
  % Use array helper defined in novathesis.csl
  \mynewdata{adviserslabel}
- 
+
  \adviserslabel[pt]={Trabalho efetuado sob a orientação do(a)}
  \adviserslabel[en]={Dissertation supervised by}
 
@@ -239,7 +243,7 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 	engBar/.style={minimum height=0.86cm},
 	umLogoPosition/.style={xshift=1.3cm,yshift=1.3cm},
 	engLogoPosition/.style={xshift=3.9cm,yshift=1.3cm}]
-	
+
 	% Uminho logo
 	\fill[fill=#1] (0,0) -- (2.6,0) -- (2.6,2.6) -- (0,2.6) -- cycle;
 	\foreach \i in {1,...,3}{
@@ -303,7 +307,7 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
   {
   \committeetitlestrfont[\novathesis@opt@coverlang]={\fontsize{14}{14}\selectfont\bfseries}%
   \commiteememberstrfont[\novathesis@opt@coverlang]={\bfseries}%
-  \fontsize{11}{11}\selectfont\printcommittee%  
+  \fontsize{11}{11}\selectfont\printcommittee%
   }%
   {}%
 }
@@ -318,6 +322,3 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
   \thedatemonth, \thedateyear%
   \fi%
 }
-
-
-
