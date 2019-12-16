@@ -95,9 +95,9 @@
 \degreestr[phdprop,m,en]={Doctor of Philosophy}
 \degreestr[phdprop,f,en]={Doctor of Philosophy}
 
-\docdegreestr[bsc,en]={Bachelor Report}
-\docdegreestr[msc,en]={Master Dissertation}
-\docdegreestr[mscplan,en]={Master Dissertation\'s Preliminary Report}
+\docdegreestr[bsc,en]={Bachelor\'s Report}
+\docdegreestr[msc,en]={Master\'s Dissertation}
+\docdegreestr[mscplan,en]={Master\'s Dissertation Preliminary Report}
 \docdegreestr[phdplan,en]={Doctorate Qualification}
 \docdegreestr[phdprop,en]={Doctorate Proposal}
 \docdegreestr[phd,en]={Doctorate Dissertation}
