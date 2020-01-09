@@ -4,14 +4,14 @@
 %%
 %% Costumization for UM-ENG (strings and cover)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\usepackage{upquote}
 % University
 \university[pt]={Universidade do Minho}
-\university[en]={University of Minho}
+\university[en]={Universidade do Minho}
 
 % Faculty / School
 \faculty[pt]={Escola de Engenharia}
-\faculty[en]={School of Engineering}
+\faculty[en]={Escola de Engenharia}
 
 % Scientific field
 \majorfield[pt]={Engenharia Informática}
@@ -33,12 +33,6 @@
 \thesiscover[bsc,front]={}
 \thesiscover[plain,front]={}
 
-% Spine info
-%\spine[logo]={logoISEL}
-%\spine[author]={\theauthorshortname}
-%\spine[title]={\thetitle}
-%\spine[year]={\thedateyear}
-%
 % Set margins for "normal" pages
 \margin[screen,top]={2.5cm}
 \margin[screen,bottom]={2.5cm}
@@ -95,9 +89,9 @@
 \degreestr[phdprop,m,en]={Doctor of Philosophy}
 \degreestr[phdprop,f,en]={Doctor of Philosophy}
 
-\docdegreestr[bsc,en]={Bachelor\'s Report}
-\docdegreestr[msc,en]={Master\'s Dissertation}
-\docdegreestr[mscplan,en]={Master\'s Dissertation Preliminary Report}
+\docdegreestr[bsc,en]={Bachelor Report}
+\docdegreestr[msc,en]={Master's Dissertation}
+\docdegreestr[mscplan,en]={Master Dissertation's Preliminary Report}
 \docdegreestr[phdplan,en]={Doctorate Qualification}
 \docdegreestr[phdprop,en]={Doctorate Proposal}
 \docdegreestr[phd,en]={Doctorate Dissertation}
@@ -121,6 +115,8 @@
 \dissertationstr[mscplan,en]={%
 \thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master of \themajorfield[\novathesis@opt@coverlang]}
 
+\dissertationstr[msc,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Mestrado em \themajorfield[\novathesis@opt@coverlang]}
 
 \dissertationstr[msc,en]={%
 \thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master of \themajorfield[\novathesis@opt@coverlang]}
