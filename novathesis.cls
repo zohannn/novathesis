@@ -901,10 +901,16 @@
 %% Deal with optional lists in the frontmatter: listoftables, litoffigures, etc.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newlistof{lstlistoflistings}{lol}{\lstlistlistingname}
+
+
+\newlistof{lstlistofalgorithms}{loa}{\listalgorithmname}
+
+\renewcommand{\lstlistoflistings}{\listofalgorithms}
+
+
 \newcommand{\novathesis@printlist}[1]{%
 	#1\cleardoublepage%
 }
-\newlistof{lstlistofalgorithms}{loa}{\listalgorithmname}
 
 \newcommand{\addlisttofrontmatter}[1]{%
 	\listgadd{\novathesis@frontmatter@list}{#1}%
