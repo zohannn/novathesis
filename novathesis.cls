@@ -905,8 +905,6 @@
 
 \newlistof{lstlistofalgorithms}{loa}{\listalgorithmname}
 
-\renewcommand{\lstlistoflistings}{\listofalgorithms}
-
 
 \newcommand{\novathesis@printlist}[1]{%
 	#1\cleardoublepage%
