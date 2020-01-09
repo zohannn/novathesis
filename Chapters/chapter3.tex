@@ -294,24 +294,24 @@ and variance $1$ on a probability space $(\Omega,\mathcal{F},\mathbb{P})$. Then}
 %\EndIf
 %\end{algorithmic}
 \begin{algorithmic} % enter the algorithmic environment
-    \REQUIRE {$n \geq 0 \vee x \neq 0$}
-    \ENSURE {$y = x^n$}
-    \STATE $y \Leftarrow 1$
-    \IF{$n < 0$}
-        \STATE $X \Leftarrow 1 / x$
-        \STATE $N \Leftarrow -n$
-    \ELSE
-        \STATE $X \Leftarrow x$
-        \STATE $N \Leftarrow n$
-    \ENDIF
-    \WHILE{$N \neq 0$}
-        \IF{$N$ is even}
-            \STATE $X \Leftarrow X \times X$
-            \STATE $N \Leftarrow N / 2$
-        \ELSE[$N$ is odd]
-            \STATE $y \Leftarrow y \times X$
-            \STATE $N \Leftarrow N - 1$
-        \ENDIF
-    \ENDWHILE
+    \Require {$n \geq 0 \vee x \neq 0$}
+    \Ensure {$y = x^n$}
+    \State $y \Leftarrow 1$
+    \If{$n < 0$}
+        \State $X \Leftarrow 1 / x$
+        \State $N \Leftarrow -n$
+    \Else
+        \State $X \Leftarrow x$
+        \State $N \Leftarrow n$
+    \EndIf
+    \While{$N \neq 0$}
+        \If{$N$ is even}
+            \State $X \Leftarrow X \times X$
+            \State $N \Leftarrow N / 2$
+        \ElsIf{$N$ is odd}
+            \State $y \Leftarrow y \times X$
+            \State $N \Leftarrow N - 1$
+        \EndIf
+    \EndWhile
 \end{algorithmic}
 \end{algorithm}
