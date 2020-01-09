@@ -19,6 +19,9 @@
 
 \RequirePackage{appendix}
 
+\RequirePackage{algorithmicx}
+\RequirePackage[chapter]{algorithm}
+\RequirePackage{algpseudocode}
 
 %%%%% Fine tuning of typesetting
 %\RequirePackage[%
