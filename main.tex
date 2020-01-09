@@ -35,9 +35,9 @@
 
 % The default option marked with (*)
 \documentclass[
-  docdegree=msc,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
+  docdegree=mscplan,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
   school=um/eeng,      % nova/fct(*), nova/fcsh, nova/ims, ul/ist, ul/fc, ipl/isel
-  lang=pt,              % en(*), fr, it, pt
+  lang=en,              % en(*), fr, it, pt
   %coverlang=en,         % defaults to main language
   %copyrightlang=en,     % defaults to main language
   fontstyle=newsgott,    % baskervaldx bookman charter ebgaramond fbb fourier garamond
@@ -87,7 +87,7 @@
     % showtrims,          % DEBUG
     a4paper,            % the paper size/format
     12pt,               % 10pt, 11pt(*), 12pt
-    draft,              % draft, final  <= Replace 'draft' with 'final' in final version
+    final,              % draft, final  <= Replace 'draft' with 'final' in final version
     oneside
   },
   media=screen,         % screen(*), paper
@@ -109,6 +109,23 @@
 %------------------------------------------------------------------
 % Additional packages you may want to use (comment those not needed)
 %------------------------------------------------------------------
+
+% Important package for the licensing. By default english is used, however
+% is necessary to explicity define the language if the license is in
+% portuguese. The modifier must be changed accordingly to user preferences.
+% If the licensing is different from any of the Creative Commons (all
+% rights reserved for instance) comment the line with \printcopyright and
+% add your own custom file in that place. Note that all files must be in
+% the Chapters folder to include.
+
+\usepackage[
+    type={CC},
+    %lang=portuguese,
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
+
+
 \linespread{1.3}
 %% VERY IMPORTANT
 \usepackage{booktabs}    % Beautiful simple tables
@@ -128,12 +145,7 @@
 %% FOR DEMO PURPOSES ONLY --- TO BE REMOVED by final users
 \usepackage{lipsum}
 
-\usepackage[
-    type={CC},
-    lang=portuguese,
-    modifier={by-nc-sa},
-    version={4.0},
-]{doclicense}
+
 %------------------------------------------------------------------
 % Costumization of some packages
 %------------------------------------------------------------------
@@ -175,6 +187,8 @@
 
 
 \title[A Very Long and Impressive Thesis Title\\With a Line Break]{A Very Long and Impressive Thesis Title With a Line Break}
+
+% UM Formatting rules doesn't include subtitles in the cover and frontpage
 \subtitle{Science is beautiful}
 
 % Autor
@@ -186,10 +200,9 @@
 \datemonth{\DTMmonthname{\month}}
 \dateyear{\the\year}
 
-% Front page image - for ISEL template - must be 12 x 8 cm
-%\frontpageimage{frontPageImage.png}
 
-% Advisers
+% Advisers - For UM the position and University can be blank  but must be present
+% for instance \adviser[m]{John Doe Adviser Name}{}{} 
 % use "\\&" if necessary to break the lines in the apprpriate place
 % use [f] for female and [m] for male
 \adviser[f]{John Doe Adviser Name}{Full Professor}{\\& NOVA University of Lisbon} 
@@ -198,7 +211,8 @@
 % \adviser[m]{John Doe Third Adviser Name}{Associate\\& Professor}{Some University Somewhere}
 
 
-% Co-Advisers (maximum of 9)
+% Co-Advisers (maximum of 9) For UM the position and University can be blank but must be present
+% for instance \coadviser[m]{John Doe Co-Adviser Name}{}{} 
 % use [f] for female and [m] for male
 \coadviser[f]{John Doe Co-Adviser Name}{Associate\\& Professor}{NOVA University of Lisbon}
 % \coadviser[f]{[Nome da co-orientadora 2]}{[Profª.\ Auxiliar]}{[Universidade Nova de Lisboa]}
@@ -279,7 +293,7 @@
 \thesisfrontmatter  % Before the main text (TOC, etc)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printaftercover
-\printcopyright    % Print the copyright page (will only be printed if adequate for the document type)
+\printcopyright    % Print the copyright page 
 \printstatementofintegrity
 \printdedicatory  % Print the dedicatory (will only be printed if adequate for the document type)
 \printacknowledgements  % Print the acknowledgments (will only be printed if adequate for the document type)
@@ -298,7 +312,6 @@
 \printbib    % Print the bibliography
 % \printotherlists   % Alternative location to print the other lists (if you uncomment this one, comment the other one above)
 \printotherlists   % If option 'otherlistsat=back', print other lists of contents according to instructions given above, otherwise do nothing
-% \addtocontents{toc}{\setlength{\cftsecnumwidth}{4em}}
 \printappendixes  % Print appendixes, if any!
 \printannexes  % Print appendixes, if any!
 \printbackcoverpage
