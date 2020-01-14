@@ -998,18 +998,33 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Copyright page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\@copyrightfile}{\@empty}
+\newcommand{\copyrightfile}[1]{\renewcommand{\@copyrightfile}{#1}}
+
+
 \newcommand{\printcopyright}{%
-	\ifthenelse{%
-		\equal{\novathesis@opt@docdegree}{bsc}% bsc
-		\OR%
-		\equal{\novathesis@opt@docdegree}{msc}% msc
-		\OR%
-		\equal{\novathesis@opt@docdegree}{phd}% phd
-	}{% THEN
-		\printcopyrightpage%
-	}{% ELSE
-	}%
-}
+               \ifthenelse{%
+                       \equal{\novathesis@opt@docdegree}{bsc}  % bsc
+                       \OR%
+                       \equal{\novathesis@opt@docdegree}{msc}  % msc
+                       \OR%
+                       \equal{\novathesis@opt@docdegree}{phd}  % phd
+               }{% THEN
+
+               \InputIfFileExists{Chapters/\@copyrightfile}{%
+                       % File dedicatory.tex exists and is read
+                       \global\let\@copyrightfile\@empty%
+                       \cleardoublepage%
+               }{%
+                       % File does not exist
+      \printcopyrightpage
+               }%
+               }{% ELSE
+               }%
+       }%
+
 
 \newcommand{\printcopyrightpage}{%
 

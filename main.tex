@@ -35,7 +35,7 @@
 
 % The default option marked with (*)
 \documentclass[
-  docdegree=mscplan,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
+  docdegree=msc,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
   school=um/eeng,      % nova/fct(*), nova/fcsh, nova/ims, ul/ist, ul/fc, ipl/isel
   lang=en,              % en(*), fr, it, pt
   %coverlang=en,         % defaults to main language
@@ -107,26 +107,41 @@
 
 
 %------------------------------------------------------------------
-% Additional packages you may want to use (comment those not needed)
+% IMPORTANT --- LICENSING 
 %------------------------------------------------------------------
 
-% Important package for the licensing. By default english is used, however
-% is necessary to explicity define the language if the license is in
-% portuguese. The modifier must be changed accordingly to user preferences.
-% If the licensing is different from any of the Creative Commons (all
-% rights reserved for instance) comment the line with \printcopyright and
-% add your own custom file in that place. Note that all files must be in
-% the Chapters folder to include.
-
+%%%%%%%%% Important package for the licensing. 
 \usepackage[
     type={CC},
     %lang=portuguese,
     modifier={by-nc-sa},
     version={4.0},
-]{doclicense}
+]{doclicense} % By default english is used, however  is necessary to
+% explicity define the language if the license is in portuguese. The
+% modifier must be changed accordingly to user preferences.  If the
+% licensing is different from any of the Creative Commons (all rights
+% reserved for instance) just uncomment the line with \copyrightfile below
+% and add your own custom file and the doclicense package will be ignored.
+% Here the custom file has the name copyright
+
+%%%%%%%% The custom copyright file. 
+
+%\copyrightfile{copyright} % Uncomment to include yours. There is
+% a template in the Chapters folder with a defined command, but you can
+% change however you want.
 
 
+%------------------------------------------------------------------
+% Additional packages you may want to use (comment those not needed)
+%------------------------------------------------------------------
+
+% The line spacing required by UM is 1.5. However LaTeX uses
+% different font references when applying the factor for line spacing.
+% Hence the 1.3. The macro \OnehalfSpacing is the default. You can comment
+% the line below or adjust it yourself.
 \linespread{1.3}
+
+
 %% VERY IMPORTANT
 \usepackage{booktabs}    % Beautiful simple tables
 \usepackage{paralist}    % To enable customizble enumerates
