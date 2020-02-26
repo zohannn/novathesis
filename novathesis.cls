@@ -210,7 +210,18 @@
   \sbox{\novathesis@coverbox}{%
 
     \gdef\hide{1}%
+   \ifthenelse{%
+     \equal{\novathesis@opt@docdegree}{bsc}  % bsc
+     \OR%
+     \equal{\novathesis@opt@docdegree}{msc}  % msc
+     \OR%
+     \equal{\novathesis@opt@docdegree}{mscplan}  % msc
+   }{% THEN
+
     \@coverstyle{white}{grey}
+   }{ % ELSE
+    \@coverstyle{grey}{white}
+   }%
     \parbox[t][\mpheight][t]{\mpwidth}{%
       \printcoveritems%
     }%
