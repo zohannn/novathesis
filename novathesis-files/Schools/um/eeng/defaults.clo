@@ -4,6 +4,7 @@
 %%
 %% Costumization for UM-ENG (strings and cover)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage{upquote}
 % University
 \university[pt]={Universidade do Minho}
@@ -14,6 +15,9 @@
 \faculty[en]={Escola de Engenharia}
 
 % Scientific field
+\mynewdata{phdmajorfield}
+\phdmajorfield[pt]={Informática}
+\phdmajorfield[en]={Computer Science}
 \majorfield[pt]={Engenharia Informática}
 \majorfield[en]={Informatics Engineering}
 
@@ -123,23 +127,29 @@
 
 
 \dissertationstr[phdplan,pt]={%
-\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Doutoramento em \themajorfield[\novathesis@opt@coverlang]}
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
 
 \dissertationstr[phdprop,pt]={%
-\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Doutoramento em \themajorfield[\novathesis@opt@coverlang]}
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
 
 \dissertationstr[phd,pt]={%
-\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Doutoramento em \themajorfield[\novathesis@opt@coverlang]}
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
 
 
 \dissertationstr[phdplan,en]={%
-\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Doctorate in \themajorfield[\novathesis@opt@coverlang]}
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
 
 \dissertationstr[phdprop,en]={%
-\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Doctorate in \themajorfield[\novathesis@opt@coverlang]}
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
 
 \dissertationstr[phd,en]={%
-\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Doctorate in \themajorfield[\novathesis@opt@coverlang]}
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
 
 
 
@@ -217,6 +227,7 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 
  % Use array helper defined in novathesis.csl
  \mynewdata{adviserslabel}
+
 
  \adviserslabel[pt]={Trabalho efetuado sob a orientação do(a)}
  \adviserslabel[en]={Work supervised by}
