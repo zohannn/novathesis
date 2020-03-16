@@ -57,4 +57,5 @@ Please check the file `changelog.txt` for the complete listing of changes.
 ## Resources
 
 [TexBlog](https://texblog.org/)
+[Awesome Latex](https://github.com/egeerardyn/awesome-LaTeX)
 
