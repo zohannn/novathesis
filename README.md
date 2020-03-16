@@ -52,3 +52,9 @@ All contributors, both sporadic and regular, are welcome. :) Please [contact me]
 ## Recent News
 
 Please check the file `changelog.txt` for the complete listing of changes.
+
+
+## Resources
+
+[TexBlog](https://texblog.org/)
+
