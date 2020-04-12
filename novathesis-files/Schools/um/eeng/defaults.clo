@@ -5,7 +5,7 @@
 %% Costumization for UM-ENG (strings and cover)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{upquote}
+\RequirePackage{upquote}
 % University
 \university[pt]={Universidade do Minho}
 \university[en]={Universidade do Minho}

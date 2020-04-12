@@ -1,12 +1,12 @@
-.PHONY: all clean 
-all: deps dissertacao.pdf clean
+.PHONY: all clean install deps 
+all: dissertacao.pdf clean
 
 dissertacao.pdf: main.tex
 	latexmk -xelatex main.tex --outdir=dissertacao 2>&1 > /dev/null 
 
 debug: main.tex
 	latexmk -xelatex main.tex --outdir=dissertacao 
-	cp dissertacao/main.pdf dissertation.pdf
+	mv dissertacao/main.pdf dissertation.pdf
 
 clean: 
 	mv dissertacao/main.pdf dissertation.pdf
