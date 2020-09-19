@@ -255,7 +255,7 @@
 	  \newsavebox{\novathesis@aftercoverbox}%
 	  \sbox{\novathesis@aftercoverbox}{%
         \gdef\hide{0}%
-        \gdef\umc{grey}\gdef\engc{lightgray}
+        \gdef\umc{grey}\gdef\schoolc{lightgray}
         \@coverstyle{white}{grey}
 	    \parbox[t][\mpheight][t]{\mpwidth}{%
 	      \printcoveritems%
