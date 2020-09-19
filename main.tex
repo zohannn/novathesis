@@ -37,9 +37,10 @@
 
 % The default option marked with (*)
 \documentclass[
-  docdegree=msc,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
-  school=um/eeng,      % nova/fct(*), nova/fcsh, nova/ims, ul/ist, ul/fc, ipl/isel
-  lang=en,              % en(*), fr, it, pt
+  docdegree=phd,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
+  school=um/eeng,      % nova/fct(*), nova/fcsh, nova/ims, ul/ist, ul/fc,
+  % ipl/isel, um/eeng, um/emed 
+  lang=pt,              % en(*), fr, it, pt
   %coverlang=en,         % defaults to main language
   %copyrightlang=en,     % defaults to main language
   fontstyle=newsgott,    % baskervaldx bookman charter ebgaramond fbb fourier garamond
@@ -194,8 +195,20 @@
 %        and file 'nova-thesis/lang-text.clo'
 % You may override here any of the values defined there
 % e.g.
-% \majorfield[pt]={Engenharia Biomédica}
-% \majorfield[en]={Biomedical Engineering}
+
+% PHD major field
+% \phdmajorfield[pt]={Ortopedia}
+% \phdmajorfield[en]={Orthopedics}
+
+% Masters major field 
+%\majorfield[pt]={Engenharia Biomédica}
+%\majorfield[en]={Biomedical Engineering}
+ 
+ % Department
+% \department[pt]={Departamento de Informática}
+% \department[en]={Department of Informatics}
+
+
 % \thesiscover[msc,front]={cover-megi-nova-ims}
 % \thesiscover[msc,front]={cover-mgi-nova-ims}
 % \glstocfalse % Uncomment to remove 
