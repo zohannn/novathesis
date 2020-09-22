@@ -400,6 +400,14 @@
   \selectthelanguage{\novathesis@opt@coverlang}
 }
 
+\gdef\thesignaturelinestr{%
+  \thispagestyle{empty}%
+  \selectthelanguage{\novathesis@opt@coverlang}%
+  \thesignatureline[\novathesis@opt@coverlang]%
+  \selectthelanguage{\novathesis@opt@coverlang}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% IDENTIFICATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -996,7 +1004,8 @@
     \AtPageCenter{% lower-left anchor at Page Center
       \makebox[0pt]{% horizontally centered anchor
         \parbox{\textwidth}{%
-        \thestatementofintegritystr%
+          \thestatementofintegritystr\\[2cm]%
+        \thesignaturelinestr% 
         }% Necessarily vertically centered anchor
       }%
     }%
