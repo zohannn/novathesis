@@ -12,7 +12,7 @@ clean:
 	mv dissertacao/main.pdf dissertation.pdf
 	rm -rf dissertacao/
 
-install: add_repo 
+install: deps
 	sudo apt install latexmk -y 
 
 
