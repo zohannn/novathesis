@@ -16,6 +16,7 @@ install: deps
 	sudo apt install latexmk -y 
 
 deps:
+	sudo add-apt-repository universe \
 	sudo apt install texlive-xetex  \
 	texlive-generic-extra  \
 	texlive-fonts-recommended cm-super  \
