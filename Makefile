@@ -12,19 +12,20 @@ clean:
 	mv dissertacao/main.pdf dissertation.pdf
 	rm -rf dissertacao/
 
-install: deps
+install: add_repo 
 	sudo apt install latexmk -y 
 
+
 deps:
-	sudo add-apt-repository universe \
 	sudo apt install texlive-xetex  \
-	texlive-generic-extra  \
-	texlive-fonts-recommended cm-super  \
-	texlive-lang-portuguese  \
-	texlive-lang-english  \
-	texlive-science  \
-	texlive-fonts-extra  \
-	texlive-bibtex-extra biber -y 
+		texlive-fonts-recommended \
+		cm-super \
+		texlive-lang-portuguese  \
+		texlive-lang-english  \
+		texlive-science  \
+		texlive-fonts-extra  \
+		texlive-bibtex-extra biber -y 
+
  
 	
 
