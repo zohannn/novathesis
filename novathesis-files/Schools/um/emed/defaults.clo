@@ -2,7 +2,7 @@
 %% defaults.clo
 %% NOVA thesis configuration file
 %%
-%% Costumization for UM-ENG (strings and cover)
+%% Costumization for UM-MED (strings and cover)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{upquote}
@@ -47,37 +47,46 @@
 \margin[paper,left]={2.5cm}
 \margin[paper,right]={2.5cm}
 
+% Set margins for "normal" pages
+\margin[screen,top]={2.5cm}
+\margin[screen,bottom]={2.5cm}
+\margin[screen,left]={2.5cm}
+\margin[screen,right]={2.5cm}
+\margin[paper,top]={2.5cm}
+\margin[paper,bottom]={2.5cm}
+\margin[paper,left]={2.5cm}
+\margin[paper,right]={2.5cm}
+
 % Set margins for cover pages
 \margin[phd,top]={0cm}
 \margin[phd,bottom]={1cm}
-\margin[phd,left]={7.9cm}
+\margin[phd,left]={18.5em}
 \margin[phd,right]={0cm}
 \margin[phdplan,top]={0cm}
 \margin[phdplan,bottom]={1cm}
-\margin[phdplan,left]={7.9cm}
+\margin[phdplan,left]={18.5em}
 \margin[phdplan,right]={0cm}
 \margin[phdprop,top]={0cm}
 \margin[phdprop,bottom]={1cm}
-\margin[phdprop,left]={7.9cm}
+\margin[phdprop,left]={18.5em}
 \margin[phdprop,right]={0cm}
 \margin[msc,top]={0cm}
 \margin[msc,bottom]={1cm}
-\margin[msc,left]={7.9cm}
+\margin[msc,left]={18.5em}
 \margin[msc,right]={0cm}
 \margin[mscplan,top]={0cm}
 \margin[mscplan,bottom]={1cm}
-\margin[mscplan,left]={7.9cm}
+\margin[mscplan,left]={18.5em}
 \margin[mscplan,right]={0cm}
 \margin[bsc,top]={0cm}
 \margin[bsc,bottom]={1cm}
-\margin[bsc,left]={7.9cm}
+\margin[bsc,left]={18.5em}
 \margin[bsc,right]={0cm}
 \margin[plain,top]={2.5cm}
 \margin[plain,bottom]={2.5cm}
 \margin[plain,left]={2.5cm}
 \margin[plain,right]={2.5cm}
 %
-
 
 
 \degreestr[bsc,m,en]={Bachelor}
@@ -336,13 +345,12 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 
 
 % Author name and Title of Dissertation
-\coveritem[l]{4.3cm}{%
+\coveritem[l]{10.5em}{%
   \linespread{1.0}
-  \fontsize{17pt}{20.4pt}\selectfont%
-  \theauthorname%
-  \\[2.5ex]
-  \fontsize{17pt}{20.4pt}\selectfont%
-  \textbf{\covertitle}%
+  \fontsize{17pt}{20.4pt}\selectfont{%
+  \theauthorname\\[2.7ex]%
+  %\fontsize{17pt}{20.4pt}\selectfont%
+  \textbf{\covertitle}}%
 }
 
 
@@ -358,6 +366,7 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 \\\rule{0pt}{6mm}
     }
 }
+
 
 
 % Committee — only print the committee for the main classes

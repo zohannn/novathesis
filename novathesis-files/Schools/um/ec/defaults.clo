@@ -2,17 +2,17 @@
 %% defaults.clo
 %% NOVA thesis configuration file
 %%
-%% Costumization for UM-ENG (strings and cover)
+%% Costumization for UM-CIENCIAS (strings and cover)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage{upquote}
+\usepackage{upquote}
 % University
 \university[pt]={Universidade do Minho}
 \university[en]={Universidade do Minho}
 
 % Faculty / School
-\faculty[pt]={Escola de Engenharia}
-\faculty[en]={Escola de Engenharia}
+\faculty[pt]={Escola de Ciências}
+\faculty[en]={Escola de Ciências}
 
 % Scientific field
 \mynewdata{phdmajorfield}
@@ -26,7 +26,7 @@
 \department[en]={Department of Informatics}
 
 % Comiittee printing order
-\committeeorder[all]={c,r,a,m}%
+%\committeeorder[all]={c,r,a,m}%
 
 % Cover background images
 \thesiscover[phd,front]={}
@@ -36,16 +36,6 @@
 \thesiscover[mscplan,front]={}
 \thesiscover[bsc,front]={}
 \thesiscover[plain,front]={}
-
-% Set margins for "normal" pages
-\margin[screen,top]={2.5cm}
-\margin[screen,bottom]={2.5cm}
-\margin[screen,left]={2.5cm}
-\margin[screen,right]={2.5cm}
-\margin[paper,top]={2.5cm}
-\margin[paper,bottom]={2.5cm}
-\margin[paper,left]={2.5cm}
-\margin[paper,right]={2.5cm}
 
 % Set margins for "normal" pages
 \margin[screen,top]={2.5cm}
@@ -192,6 +182,17 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 
 \statementofintegritytextstr[en]={\begin{center}{\textbf{STATEMENT OF INTEGRITY}}\end{center} \hspace{\parindent} I hereby declare having conducted this academic work with integrity. I confirm that I have not used plagiarism or any form of undue use of information or falsification of results along the process leading to its elaboration.\\[1ex] \rule{\parindent}{0pt} I further declare that I have fully acknowledged the Code of Ethical Conduct of the \theuniversity[\novathesis@opt@coverlang].}
 
+\mynewdata{signatureline}
+\signatureline[en]={\makebox[0.1\textwidth]{\hrulefill},
+\makebox[0.4\textwidth]{\hrulefill}\\*[0.1mm]\makebox[0.1\textwidth]{\footnotesize
+(Location)} \makebox[0.4\textwidth]{\footnotesize (Date)}
+\\[1cm]\begin{center}\makebox[0.7\textwidth]{\hrulefill}\\[1ex](\theauthorname)\end{center}}
+
+\signatureline[pt]={\makebox[0.1\textwidth]{\hrulefill},
+\makebox[0.4\textwidth]{\hrulefill}\\*[0.1mm]\makebox[0.1\textwidth]{\footnotesize
+(Localização)} \makebox[0.4\textwidth]{\footnotesize (Data)}
+\\[1cm]\begin{center}\makebox[0.7\textwidth]{\hrulefill}\\[1ex](\theauthorname)\end{center}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % IST guidelines:
 % The pages should be numbered consecutively at the bottom centre of the
@@ -252,13 +253,14 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 
 
 \definecolor{grey}{rgb}{0.6,0.6,0.6}
-\definecolor{eng}{cmyk}{0.14,0.71,1,0.03}
-\definecolor{um}{cmyk}{0.25,1.00,1.00,0.22}
+\definecolor{ec}{cmyk}{0.35,0.09,0.0,0.0}
+\definecolor{um}{cmyk}{0.25,1.00,0.95,0.20}
 \definecolor{lightGray}{gray}{0.92}
 \definecolor{verylightgray}{cmyk}{0,0,0,0.05}
 
+
 \gdef\umc{um}
-\gdef\schoolc{eng}
+\gdef\schoolc{ec}
 \RequirePackage{tikz}
 \usetikzlibrary{positioning}
 \usetikzlibrary{backgrounds}
@@ -278,10 +280,34 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 		\node at (\i*120+30:0.45)[bar,umBig,umLogoPosition,rotate=\i*120-60]{};
 		\node at (\i*120+90:0.60)[bar,umSmall,umLogoPosition,rotate=\i*120]{};
 	}
-	% EngUminho logo
+	% ecUminho logo
 	\fill[fill=#2] (2.6,0) -- (5.2,0) -- (5.2,2.6) -- (2.6,2.6) -- cycle;
-	\foreach \i in {1,...,5}
-		\node at (\i*72-90:0.74)[bar,engBar,engLogoPosition,rotate=\i*72-90]{};
+
+\begin{scope}[fill=white, xscale=-1, yscale=1, shift={(-2.6, 2.6)}, rotate=180]
+  \path[fill] (1.3147,2.1339) .. controls (1.2762,2.1236) and (1.2514,2.0872) .. (1.2567,2.0485) .. controls (1.2588,2.0323) and (1.2632,2.0222) .. (1.2779,1.9974) .. controls (1.2844,1.9866) and (1.3161,1.9320) .. (1.3484,1.8759) .. controls (1.3807,1.8198) and (1.4105,1.7699) .. (1.4146,1.7649) .. controls (1.4363,1.7396) and (1.4786,1.7321) .. (1.5102,1.7480) .. controls (1.5446,1.7658) and (1.5615,1.8140) .. (1.5453,1.8489) .. controls (1.5419,1.8561) and (1.5186,1.8973) .. (1.4938,1.9404) .. controls (1.4688,1.9835) and (1.4372,2.0381) .. (1.4235,2.0619) .. controls (1.4098,2.0855) and (1.3963,2.1077) .. (1.3932,2.1108) .. controls (1.3835,2.1212) and (1.3681,2.1306) .. (1.3539,2.1342) .. controls (1.3371,2.1385) and (1.3315,2.1385) .. (1.3147,2.1339) -- cycle;
+
+
+
+  \path[fill] (0.6464,1.7856) .. controls (0.6320,1.7798) and (0.6240,1.7743) .. (0.6132,1.7622) .. controls (0.5771,1.7220) and (0.5934,1.6561) .. (0.6445,1.6370) .. controls (0.6575,1.6322) and (0.6608,1.6320) .. (0.8147,1.6327) -- (0.9714,1.6334) -- (0.9839,1.6399) .. controls (1.0008,1.6488) and (1.0128,1.6614) .. (1.0205,1.6777) .. controls (1.0292,1.6965) and (1.0294,1.7264) .. (1.0207,1.7442) .. controls (1.0126,1.7610) and (0.9947,1.7776) .. (0.9786,1.7836) .. controls (0.9656,1.7885) and (0.9615,1.7887) .. (0.8094,1.7885) .. controls (0.6960,1.7885) and (0.6517,1.7875) .. (0.6464,1.7856) -- cycle;
+
+
+
+  \path[fill] (1.9512,1.7384) .. controls (1.9380,1.7350) and (1.9269,1.7285) .. (1.9168,1.7182) .. controls (1.9098,1.7112) and (1.8867,1.6715) .. (1.8390,1.5853) .. controls (1.8017,1.5176) and (1.7687,1.4572) .. (1.7656,1.4505) .. controls (1.7574,1.4331) and (1.7574,1.4067) .. (1.7658,1.3898) .. controls (1.7728,1.3758) and (1.7906,1.3583) .. (1.8046,1.3510) .. controls (1.8337,1.3361) and (1.8698,1.3409) .. (1.8922,1.3624) .. controls (1.9023,1.3722) and (1.9045,1.3758) .. (1.9620,1.4806) .. controls (1.9849,1.5222) and (2.0123,1.5720) .. (2.0229,1.5911) .. controls (2.0487,1.6373) and (2.0518,1.6462) .. (2.0506,1.6659) .. controls (2.0484,1.6943) and (2.0299,1.7196) .. (2.0017,1.7324) .. controls (1.9880,1.7386) and (1.9635,1.7418) .. (1.9512,1.7384) -- cycle;
+
+
+
+  \path[fill] (0.7564,1.2661) .. controls (0.7391,1.2639) and (0.7188,1.2535) .. (0.7090,1.2415) .. controls (0.6977,1.2280) and (0.5568,0.9837) .. (0.5532,0.9714) .. controls (0.5518,0.9661) and (0.5506,0.9545) .. (0.5506,0.9456) .. controls (0.5511,0.9163) and (0.5667,0.8917) .. (0.5929,0.8787) .. controls (0.6201,0.8655) and (0.6493,0.8671) .. (0.6726,0.8835) .. controls (0.6904,0.8958) and (0.6820,0.8823) .. (0.7863,1.0629) .. controls (0.8137,1.1105) and (0.8383,1.1543) .. (0.8409,1.1601) .. controls (0.8438,1.1666) and (0.8455,1.1765) .. (0.8457,1.1866) .. controls (0.8464,1.2355) and (0.8053,1.2723) .. (0.7564,1.2660) -- cycle;
+
+
+
+  \path[fill] (1.6358,0.9644) .. controls (1.6154,0.9581) and (1.6007,0.9449) .. (1.5886,0.9220) .. controls (1.5838,0.9129) and (1.5829,0.9078) .. (1.5829,0.8895) .. controls (1.5829,0.8715) and (1.5838,0.8659) .. (1.5889,0.8558) .. controls (1.5971,0.8390) and (1.6149,0.8224) .. (1.6312,0.8161) .. controls (1.6445,0.8113) and (1.6471,0.8111) .. (1.8029,0.8118) -- (1.9608,0.8125) -- (1.9731,0.8190) .. controls (2.0111,0.8390) and (2.0268,0.8852) .. (2.0080,0.9230) .. controls (1.9989,0.9418) and (1.9835,0.9560) .. (1.9654,0.9630) .. controls (1.9526,0.9675) and (1.9474,0.9678) .. (1.7988,0.9675) .. controls (1.6830,0.9675) and (1.6431,0.9668) .. (1.6358,0.9644) -- cycle;
+
+
+
+  \path[fill] (1.1132,0.8561) .. controls (1.0901,0.8486) and (1.0694,0.8279) .. (1.0629,0.8055) .. controls (1.0583,0.7903) and (1.0583,0.7689) .. (1.0626,0.7564) .. controls (1.0646,0.7509) and (1.0867,0.7111) .. (1.1117,0.6676) .. controls (1.1368,0.6242) and (1.1695,0.5674) .. (1.1844,0.5417) .. controls (1.1994,0.5159) and (1.2153,0.4906) .. (1.2203,0.4856) .. controls (1.2251,0.4805) and (1.2350,0.4735) .. (1.2422,0.4699) .. controls (1.2535,0.4644) and (1.2586,0.4634) .. (1.2759,0.4634) .. controls (1.2935,0.4634) and (1.2983,0.4644) .. (1.3099,0.4702) .. controls (1.3443,0.4870) and (1.3624,0.5260) .. (1.3522,0.5612) .. controls (1.3501,0.5684) and (1.3332,0.6002) .. (1.3149,0.6319) .. controls (1.2966,0.6637) and (1.2639,0.7205) .. (1.2422,0.7583) .. controls (1.2003,0.8313) and (1.1907,0.8438) .. (1.1703,0.8529) .. controls (1.1565,0.8590) and (1.1272,0.8606) .. (1.1132,0.8561) -- cycle;
+
+\end{scope}
+
 \end{tikzpicture}}
 \def\optionaladvisers#1{\ifnum\hide=1\relax\else{#1}\fi}
 
@@ -325,7 +351,6 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
 }
 
 
-
 % Committee — only print the committee for the main classes
 \coveritem[c]{1}{%
   \ifthenelse{%
@@ -350,14 +375,3 @@ indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão
   \thedatemonth, \thedateyear%
   \fi%
 }
-\mynewdata{signatureline}
-\signatureline[en]={\makebox[0.1\textwidth]{\hrulefill},
-\makebox[0.4\textwidth]{\hrulefill}\\*[0.1mm]\makebox[0.1\textwidth]{\footnotesize
-(Location)} \makebox[0.4\textwidth]{\footnotesize (Date)}
-\\[1cm]\begin{center}\makebox[0.7\textwidth]{\hrulefill}\\[1ex](\theauthorname)\end{center}}
-
-\signatureline[pt]={\makebox[0.1\textwidth]{\hrulefill},
-\makebox[0.4\textwidth]{\hrulefill}\\*[0.1mm]\makebox[0.1\textwidth]{\footnotesize
-(Localização)} \makebox[0.4\textwidth]{\footnotesize (Data)}
-\\[1cm]\begin{center}\makebox[0.7\textwidth]{\hrulefill}\\[1ex](\theauthorname)\end{center}}
-
