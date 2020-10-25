@@ -38,14 +38,12 @@
 % The default option marked with (*)
 \documentclass[
   docdegree=msc,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
-  school=um/eeng,      % nova/fct(*), nova/fcsh, nova/ims, ul/ist, ul/fc,
-  % ipl/isel, um/eeng, um/emed 
+  school=um/eeng,      % um/eeng, um/emed, um/ec 
   lang=pt,              % en(*), fr, it, pt
   %coverlang=en,         % defaults to main language
   %copyrightlang=en,     % defaults to main language
-  fontstyle=newsgott,    % baskervaldx bookman charter ebgaramond fbb fourier garamond
-                        % heuristica kpfonts(*) libertine mathpazo1 mathpazo2 newcent
-                        % newpx newtx 
+  fontstyle=newsgott,     % Only font working. Using XeTeX with custom fonts, other fonts
+                          % won't work because they have to use pdflatex 
   chapstyle=elegant,    % bianchi bluebox brotherton dash default elegant(*) ell ger 
                         % hansen ist jenor lyhne madsen pedersen veelo vz14 vz34 vz43
   otherlistsat=front,   % front(*), back
@@ -197,12 +195,16 @@
 % e.g.
 
 % PHD major field
-% \phdmajorfield[pt]={Ortopedia}
-% \phdmajorfield[en]={Orthopedics}
+%\phdmajorfield[pt]={Medicina}
+%\phdmajorfield[en]={Medicine}
+%\phdmajorfield[pt]={Matemática}
+%\phdmajorfield[en]={Mathematics}
 
 % Masters major field 
-%\majorfield[pt]={Engenharia Biomédica}
-%\majorfield[en]={Biomedical Engineering}
+%\majorfield[pt]={Ciências da Saúde}
+%\majorfield[en]={Health Sciences}
+%\majorfield[pt]={Matemática e Computação}
+%\majorfield[en]={Mathematics and Computing}
  
  % Department
 % \department[pt]={Departamento de Informática}
