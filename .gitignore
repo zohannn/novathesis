@@ -9,6 +9,8 @@
 
 ## Intermediate documents:
 *.dvi
+main.pdf
+dissertation.pdf
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
