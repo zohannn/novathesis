@@ -37,7 +37,7 @@
 
 % The default option marked with (*)
 \documentclass[
-  docdegree=msc,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
+  docdegree=phd,        % phd(*), phdplan, phdprop, msc, mscplan, bsc
   school=um/eeng,      % um/eeng, um/emed, um/ec 
   lang=pt,              % en(*), fr, it, pt
   %coverlang=en,         % defaults to main language
@@ -158,8 +158,13 @@
 %% For automatic adding month and year
 \usepackage[calc]{datetime2}
 
+%% For boomarks
+\usepackage{bookmark}
+
 %% FOR DEMO PURPOSES ONLY --- TO BE REMOVED by final users
 \usepackage{lipsum}
+
+
 
 
 %------------------------------------------------------------------
@@ -332,6 +337,7 @@
 \printquote        % Print the quote (if file exists and is adequate for the document type)
 \printabstract    % Print abstracts (in PT and EN). The abstract in the document main language will
                   % be printed first, the abstract in the foreign language will be printed second
+\pdfbookmark[section]{\contentsname}{toc}
 \printtoc         % Always print the table of contents
 \printotherlists   % If option 'otherlistsat=front', print other lists of contents according
                   % to instructions given above, otherwise do nothing
@@ -341,6 +347,7 @@
 \thesismainmatter  % The main text
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printchapthers    % Print document chapters
+\bookmarksetup{startatroot} % end the part and go back to the root
 \printbib    % Print the bibliography
 % \printotherlists   % Alternative location to print the other lists (if you uncomment this one, comment the other one above)
 \printotherlists   % If option 'otherlistsat=back', print other lists of contents according to instructions given above, otherwise do nothing

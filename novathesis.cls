@@ -3,9 +3,9 @@
 %% novathesis.clsnova
 %% NOVA thesis document class
 %%
-%% This work is licensed under the 
-%% Creative Commons Attribution-NonCommercial 4.0 International License. 
-%% To view a copy of this license, 
+%% This work is licensed under the
+%% Creative Commons Attribution-NonCommercial 4.0 International License.
+%% To view a copy of this license,
 %% visit http://creativecommons.org/licenses/by-nc/4.0/.
 %%
 %% Version 2019/02/26 [4.2.1]
@@ -30,9 +30,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
 %%% WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
-%%% 
+%%%
 %%%   You SHOULD NOT change this file (you are playing with fire!)
-%%% 
+%%%
 %%% WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
 %%% WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -126,13 +126,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\@coverstyle}[2]{
-    \pagecolor{#1}% 
+    \pagecolor{#1}%
     \leavevmode\color{#2}%
  }
- 
+
 
 % --------------------------------------------------------
-% Colour Definition for pantone colours for UM 
+% Colour Definition for pantone colours for UM
 
 \definecolor{grey}{rgb}{0.6,0.6,0.6}
 \definecolor{eng}{cmyk}{0.14,0.71,1,0.03}
@@ -196,12 +196,12 @@
 
   \thispagestyle{empty}%
   \selectthelanguage{\novathesis@opt@coverlang}%
-  
+
   \setlength{\mpwidth}{\dimexpr%
     \paperwidth%
       -\themargin[\novathesis@opt@docdegree,left]%
       -\themargin[\novathesis@opt@docdegree,right]}%
-  
+
   \setlength{\mpheight}{\dimexpr%
     \paperheight%
       -\themargin[\novathesis@opt@docdegree,top]%
@@ -236,7 +236,7 @@
   }%
   ~% This space is important here so that the cover page is not empty anymore!
   \cleardoublepage%
-  
+
   %% Print second conver page if school is ul/fc
   \@printcommitteeauxtrue
   \setcounter{@novathesis@cnt}{0}%	reset counter used in the name listing
@@ -709,7 +709,7 @@
   \novathesis@typetwolengths{Sidefootvsep and sidefootheight}{\sidefootvsep}{and}{\sidefootheight}\\%
   \hrule%
   }
-    
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -830,7 +830,7 @@
 }
 
 
-\newcommand{\printabstract}{% 
+\newcommand{\printabstract}{%
 	\xdef\novathesis@tmp{\theabstractorder[\novathesis@opt@lang]}%
   \iteratecsvlist{\novathesis@printabstract@lang}{\novathesis@tmp}%
   % disables protrusion locally in the document for the forthcoming tables of contents
@@ -887,9 +887,9 @@
 \newcommand{\printappendixes}{%
 	\ifthenelse{\isundefined\novathesis@appendix@list}{}%
 		{\renewcommand{\appendixtocname}{\appendixnamepl}%
-         \cleardoublepage\appendix\addappheadtotoc%
+         \cleardoublepage\part{Appendices}\appendix%\addappheadtotoc%
 		 \forlistloop{\novathesis@printappendix}{\novathesis@appendix@list}}%
-} 
+}
 
 \newcommand{\annexfile}[1]{%
 	\listgadd{\novathesis@annex@list}{#1}%
@@ -902,9 +902,9 @@
 \newcommand{\printannexes}{%
 	\ifthenelse{\isundefined\novathesis@annex@list}{}%
 		{\renewcommand{\appendixtocname}{\annexnamepl}%
-         \cleardoublepage\annex\addappheadtotoc%
+         \cleardoublepage\part{Annexes}\annex%\addappheadtotoc%
 		 \forlistloop{\novathesis@printannex}{\novathesis@annex@list}}%
-} 
+}
 
 \newcommand{\annex}{
   \xdef\Hy@chapapp{annex}%
@@ -1005,7 +1005,7 @@
       \makebox[0pt]{% horizontally centered anchor
         \parbox{\textwidth}{%
           \thestatementofintegritystr\\[2cm]%
-        \thesignaturelinestr% 
+        \thesignaturelinestr%
         }% Necessarily vertically centered anchor
       }%
     }%
@@ -1119,7 +1119,7 @@
 	\rule{\textwidth}{0.2mm} ~\\[-3.5ex]%
 }
 
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Keywords
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
