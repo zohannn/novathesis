@@ -1,5 +1,5 @@
 %load text components other than NewsGotT
-\renewcommand{\rmdefault}{fbb-LF}% Roman font for use in math mode
+%\renewcommand{\rmdefault}{fbb-LF}% Roman font for use in math mode
 \RequirePackage[scaled=.85]{beramono}% used only by \mathtt
 \RequirePackage[type1]{cabin}% used only by \mathsf
 \RequirePackage{amsthm}% load before newtxmath
