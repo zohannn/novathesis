@@ -21,6 +21,7 @@ If you think this template really helped you while writing your thesis, think ab
 ### Download
 
 Get the latest realease from the [releases page](https://github.com/joaomlourenco/novathesis/releases)!
+***Tested on texlive 2017!***
 
 ### Problems and Difficulties
 
@@ -28,7 +29,7 @@ Check the [wiki](https://github.com/joaomlourenco/novathesis/wiki) and have some
 
 If you couldn't find what you were looking for, ask for help in:
 
-* the [discussion forum](https://groups.google.com/forum/#!forum/novathesis) at https://groups.google.com/forum/#!forum/novathesis. 
+* the [discussion forum](https://groups.google.com/forum/#!forum/novathesis) at https://groups.google.com/forum/#!forum/novathesis.
 * the [facebook page](https://www.facebook.com/groups/novathesis/) (PT or EN) at https://www.facebook.com/groups/novathesis.
 * the [google group](https://groups.google.com/forum/#!forum/novathesis) (EN only please) at https://groups.google.com/forum/#!forum/novathesis.
 * You may also give a look at the new [NOVA thesis blog](https://novathesis.blogspot.pt) at https://novathesis.blogspot.pt.
@@ -58,4 +59,3 @@ Please check the file `changelog.txt` for the complete listing of changes.
 
 [TexBlog](https://texblog.org/)
 [Awesome Latex](https://github.com/egeerardyn/awesome-LaTeX)
-
